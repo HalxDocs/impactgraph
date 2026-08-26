@@ -19,12 +19,13 @@ backend/dist/
 *.out
 
 # Go binaries
-api
 api.exe
 backend/api
 backend/api.exe
 backend/bin/
 bin/
+impactgraph
+impactgraph.exe
 
 # IDE
 .vscode/
