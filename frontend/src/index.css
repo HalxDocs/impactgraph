@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 3.9%;
+  --card: 0 0% 100%;
+  --primary: 0 0% 9%;
+  --muted: 0 0% 96%;
+  --border: 0 0% 90%;
+  --radius: 1rem;
+}
+.dark {
+  --background: 0 0% 4%;
+  --foreground: 0 0% 98%;
+  --card: 0 0% 9%;
+  --primary: 0 0% 98%;
+  --muted: 0 0% 14%;
+  --border: 0 0% 14%;
+}
+* { @apply border-border; }
+html { scroll-behavior: smooth; }
+body { @apply bg-white dark:bg-black text-black dark:text-white antialiased transition-colors duration-300; font-family: 'Instrument Sans', 'Inter', system-ui, sans-serif; }
+h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; letter-spacing: -0.02em; }
+code, .mono { font-family: 'JetBrains Mono', monospace; }
+.glass { @apply bg-white/80 dark:bg-zinc-900/60 backdrop-blur-xl border border-black/10 dark:border-white/10 shadow-sm; }
+::selection { @apply bg-black text-white dark:bg-white dark:text-black; }
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-thumb { @apply bg-zinc-300 dark:bg-zinc-700 rounded-full; }
+::-webkit-scrollbar-track { @apply bg-transparent; }

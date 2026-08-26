@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8080:8080"
+    environment:
+      COGNODB_URI: ${COGNODB_URI:-}
+      COGNODB_USERNAME: ${COGNODB_USERNAME:-}
+      COGNODB_PASSWORD: ${COGNODB_PASSWORD:-}
+      PORT: 8080
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+# CognoDB stays external (managed) — no db service here.
