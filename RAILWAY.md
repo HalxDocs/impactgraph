@@ -13,6 +13,9 @@ This repo is ready for Railway (monorepo with 2 services). No new SDK — just D
 
 ## 2. Deploy via Dashboard (no CLI)
 
+> **Fix for your screenshot error** `Railpack could not determine how to build the app.` → `Script start.sh not found`:
+> You deployed the **repo root `.`** as one service. Railpack scanned `backend/` + `frontend/` at root and found no `go.mod`/`package.json` at root, so it failed. **Fix: create TWO services with Root Directory set** (see steps 3 & 5 below). After fixing, delete the failed single service. This commit adds `backend/railpack.json` + `frontend/railpack.json` + `nixpacks.toml` so both Railpack and Nixpacks now succeed when Root is set correctly.
+
 1. Push is already done: `https://github.com/HalxDocs/impactgraph` (`main`).
 
 2. Go to **https://railway.app/new** → **Deploy from GitHub repo** → pick `HalxDocs/impactgraph`.
