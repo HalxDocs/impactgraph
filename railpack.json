@@ -1,0 +1,14 @@
+{
+  "$schema": "https://schema.railpack.com",
+  "provider": "shell",
+  "steps": {
+    "build": {
+      "commands": [
+        "echo '❌ Railway Root Directory is \".\" — this monorepo needs TWO services.'",
+        "echo '   Fix in 15s: Delete this failed service → + New Service → GitHub Repo → HalxDocs/impactgraph → Settings → Root Directory = backend (and second service Root = frontend)'",
+        "echo '   See RAILWAY.md section 2 for screenshots. This file exists only to give a helpful error if Root is wrong.'",
+        "exit 1"
+      ]
+    }
+  }
+}

@@ -1,5 +1,7 @@
 # Deploy ImpactGraph to Railway
 
+> **Your error** `Railpack 0.37.1 → Script start.sh not found` means you created **ONE service with Root Directory = `.`** (repo root). Root has no `go.mod`/`package.json` — only `backend/` and `frontend/` do — so Railpack fails. **Fix: delete that service and create TWO services** as below. This commit adds `railpack.json` at root that now shows this exact fix instead of `start.sh` error.
+
 This repo is ready for Railway (monorepo with 2 services). No new SDK — just Dockerfiles.
 
 ## 1. What Railway will run
