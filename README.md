@@ -1,4 +1,4 @@
-# ImpactGraph — Dependency Impact Analyzer
+# ImpactGraph — Dependency Impact Analyze
 
 > "If this dependency changes, what else could be affected?" — ImpactGraph answers it with a graph.
 
